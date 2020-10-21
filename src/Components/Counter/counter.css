@@ -1,0 +1,17 @@
+button{
+    width: 70px;
+    height:40px;
+    font-size: 18px;
+}
+
+.count{
+    font-size: 20px;
+}
+
+.mainCounter{
+    font-size: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+    min-width: 70px;
+    min-height: 40px;
+}
