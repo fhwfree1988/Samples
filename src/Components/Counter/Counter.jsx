@@ -8,22 +8,23 @@ class Counter extends Component{
         this.state ={
             mainCounter : 0
         }
-        this.increament = this.increament.bind(this);
+        this.increment = this.increment.bind(this);
     }
 
     render(){
         return(
             <div>
-                <CounterButton by={1} increamentMethod={this.increament(1)}/>
-                <CounterButton by={5} />
-                <CounterButton by={10}/>
+                <CounterButton by={1} incrementMethod={this.increment}/>
+                <CounterButton by={5} incrementMethod={this.increment}/>
+                <CounterButton by={10} incrementMethod={this.increment}/>
                 <br/>
-                <span className="mainCounter" ></span>
+                <span className="mainCounter" >{this.state.mainCounter}</span>
             </div>
         );
     }
 
-    increament(by){
+    increment(by){
+        console.log(`this is from parent ${by}`);
         this.setState({
             mainCounter : this.state.mainCounter + by//+1
         });
